@@ -45,3 +45,4 @@ class ZhihuSpider(Spider):
         if "paging" in results.keys() and results.get('paging').get('is_end') == False:
             next_url = results.get('paging').get('next')
             yield Request(url=next_url, callback=self.parse_follow)
+            pass
